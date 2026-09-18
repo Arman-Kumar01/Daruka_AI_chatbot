@@ -1,4 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react'
+
+// Production API base URL — set VITE_API_BASE_URL in Vercel environment variables
+// to your Render backend URL, e.g. https://darukaa-ai.onrender.com
+// In development (npm run dev), this is empty so Vite proxy handles /api/* routing
+const API_BASE = import.meta.env.VITE_API_BASE_URL || ''
 import {
   Sprout,
   Compass,
@@ -79,7 +84,7 @@ export default function App() {
 
   const fetchHealth = async () => {
     try {
-      const res = await fetch('/api/health')
+      const res = await fetch(`${API_BASE}/api/health`)
       if (res.ok) {
         const data = await res.json()
         setSystemHealth(data)
@@ -91,7 +96,7 @@ export default function App() {
 
   const fetchSources = async () => {
     try {
-      const res = await fetch('/api/sources')
+      const res = await fetch(`${API_BASE}/api/sources`)
       if (res.ok) {
         const data = await res.json()
         setSourcesList(data.sources || [])
@@ -103,7 +108,7 @@ export default function App() {
 
   const fetchScenarios = async () => {
     try {
-      const res = await fetch('/api/scenarios')
+      const res = await fetch(`${API_BASE}/api/scenarios`)
       if (res.ok) {
         const data = await res.json()
         setDemoScenarios(data.scenarios || [])
@@ -175,7 +180,7 @@ export default function App() {
     setLoading(true)
     setError(null)
     try {
-      const res = await fetch('/api/analyze', {
+      const res = await fetch(`${API_BASE}/api/analyze`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(structuredPayload)
@@ -203,7 +208,7 @@ export default function App() {
     setError(null)
 
     try {
-      const res = await fetch('/api/chat', {
+      const res = await fetch(`${API_BASE}/api/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

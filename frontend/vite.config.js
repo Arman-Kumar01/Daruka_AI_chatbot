@@ -6,11 +6,16 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 5173,
+    // Development proxy — only used during `npm run dev`
     proxy: {
       '/api': {
         target: 'http://localhost:8000',
         changeOrigin: true
       }
     }
+  },
+  build: {
+    outDir: 'dist',
+    sourcemap: false
   }
 })

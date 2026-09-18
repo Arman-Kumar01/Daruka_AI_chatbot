@@ -31,21 +31,46 @@ class VectorStoreService:
         self._initialize()
 
     def _initialize(self):
-        """Loads processed knowledge chunks and builds the semantic retrieval index."""
+        """Loads processed knowledge chunks and builds the semantic retrieval index.
+        
+        Deployment safety: If knowledge_chunks.json is missing (e.g. ephemeral disk on
+        Render free tier, fresh deploy), automatically re-runs ingestion from the
+        repo-controlled data/raw/*.json source files. The system never depends on a
+        pre-existing local ChromaDB directory.
+        """
         processed_path = settings.PROCESSED_FILE
         if not processed_path.exists():
-            logger.warning(f"Processed file {processed_path} not found. Running fallback check...")
-            # Try to locate data/processed/knowledge_chunks.json
+            logger.warning(f"Processed file {processed_path} not found. Checking alt path...")
             alt_path = Path(__file__).resolve().parent.parent.parent / "data" / "processed" / "knowledge_chunks.json"
             if alt_path.exists():
                 processed_path = alt_path
+            else:
+                # Auto-run ingestion from raw source files (deployment-safe fallback)
+                logger.warning("knowledge_chunks.json not found. Auto-running ingestion from raw data sources...")
+                try:
+                    import sys
+                    ingest_path = Path(__file__).resolve().parent.parent.parent / "scripts" / "ingest.py"
+                    if ingest_path.exists():
+                        import importlib.util
+                        spec = importlib.util.spec_from_file_location("ingest", ingest_path)
+                        ingest_mod = importlib.util.module_from_spec(spec)
+                        spec.loader.exec_module(ingest_mod)
+                        ingest_mod.run_ingestion()
+                        logger.info("Auto-ingestion completed successfully.")
+                        # Re-check processed path after ingestion
+                        if settings.PROCESSED_FILE.exists():
+                            processed_path = settings.PROCESSED_FILE
+                        elif alt_path.exists():
+                            processed_path = alt_path
+                except Exception as ie:
+                    logger.error(f"Auto-ingestion failed: {ie}")
 
         if processed_path.exists():
             with open(processed_path, "r", encoding="utf-8") as f:
                 self.chunks = json.load(f)
             logger.info(f"Loaded {len(self.chunks)} knowledge chunks for retrieval.")
         else:
-            logger.error("No knowledge chunks could be loaded!")
+            logger.error("No knowledge chunks could be loaded! RAG retrieval will be unavailable.")
             self.chunks = []
 
         # Build Semantic Vector Index using Scikit-Learn TF-IDF N-gram representation

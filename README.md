@@ -1,11 +1,12 @@
 # Darukaa.Earth — AI Biodiversity Intelligence System
 
-[![CI Pipeline](https://github.com/your-username/darukaa-biodiversity-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/your-username/darukaa-biodiversity-ai/actions)
+[![CI Pipeline](https://github.com/Arman-Kumar01/Daruka_AI_chatbot/actions/workflows/ci.yml/badge.svg)](https://github.com/Arman-Kumar01/Daruka_AI_chatbot/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](LICENSE)
 [![Python 3.12+](https://img.shields.io/badge/Python-3.12%2B-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115%2B-009688.svg)](https://fastapi.tiangolo.com/)
 [![React 18](https://img.shields.io/badge/React-18.3-61dafb.svg)](https://react.dev/)
-[![Tests: Pytest](https://img.shields.io/badge/Tests-22%2F22%20Passed-brightgreen.svg)](tests/)
+[![Tests: Pytest](https://img.shields.io/badge/Tests-24%2F24%20Passed-brightgreen.svg)](tests/)
+
 
 An AI-powered environmental scientist that diagnoses complex ecosystem degradation and recommends actionable, non-obvious ecological restoration interventions grounded in authentic scientific literature (FAO, IPCC, UNEP, IPBES). 
 
@@ -289,5 +290,52 @@ python -m pytest tests/ -v
 
 ---
 
+## 13. Production Deployment
+
+**GitHub Repository**: https://github.com/Arman-Kumar01/Daruka_AI_chatbot
+
+### Backend → Render (Docker)
+
+1. Go to [render.com](https://render.com) → **New Web Service**
+2. Connect GitHub repository: `Arman-Kumar01/Daruka_AI_chatbot`
+3. Select **Docker** runtime (uses `Dockerfile` at root)
+4. Set environment variables in Render Dashboard:
+
+| Variable | Value |
+|---|---|
+| `PORT` | Auto-injected by Render |
+| `DEBUG` | `false` |
+| `LLM_PROVIDER` | `auto` |
+| `ALLOWED_ORIGINS` | `https://<your-vercel-url>.vercel.app` |
+| `GEMINI_API_KEY` | *(optional)* Your Google AI key |
+
+5. Health check path: `/api/health`
+6. Note your Render URL: `https://<service-name>.onrender.com`
+
+### Frontend → Vercel
+
+1. Go to [vercel.com](https://vercel.com) → **Add New Project**
+2. Import GitHub repository: `Arman-Kumar01/Daruka_AI_chatbot`
+3. Configure:
+   - **Root Directory**: `frontend`
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `dist`
+4. Add Environment Variable:
+   - `VITE_API_BASE_URL` = `https://<your-render-service>.onrender.com`
+5. Deploy. Note your Vercel URL.
+
+### Post-Deployment
+
+After both are live:
+- Update `ALLOWED_ORIGINS` in Render with your Vercel URL
+- Test health: `GET https://<render-url>/api/health`
+- Test sources: `GET https://<render-url>/api/sources`
+
+### RAG Deployment Safety
+The RAG index is rebuilt automatically during Docker build from `data/raw/*.json` — all scientific knowledge files are repo-controlled. No external database, no persistent disk required on Render free tier.
+
+---
+
 ## License
 This project is open-sourced under the [MIT License](LICENSE).
+

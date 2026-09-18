@@ -40,6 +40,7 @@ yarn-error.log*
 # Environment & Secrets
 .env
 .env.local
+frontend/.env.local
 
 # Office temporary lock files
 ~$*
@@ -52,3 +53,7 @@ yarn-error.log*
 *.swo
 .DS_Store
 Thumbs.db
+
+# ChromaDB local index (rebuilt from data/raw/ during Docker build)
+data/chroma_db/
+*.sqlite3
