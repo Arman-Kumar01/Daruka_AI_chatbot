@@ -92,23 +92,50 @@ def create_submission_docx():
     h1.runs[0].font.color.rgb = EMERALD
 
     p_repo = doc.add_paragraph()
-    r1 = p_repo.add_run("GitHub Repository Link:\n")
+    r1 = p_repo.add_run("GitHub Repository:\n")
     r1.font.bold = True
     p_repo.add_run("https://github.com/Arman-Kumar01/Daruka_AI_chatbot\n").font.color.rgb = RGBColor(2, 132, 199)
-    p_repo.add_run("(Repository initialized with complete source code, tests, RAG pipeline, and CI/CD)\n\n")
+    p_repo.add_run("(Complete source code, RAG pipeline, 24/24 tests, CI/CD, Docker, Render + Vercel deployment config)\n\n")
 
-    r2 = p_repo.add_run("Live Application Demo / Local Endpoints:\n")
+    r2 = p_repo.add_run("Live Application (Production Deployment):\n")
     r2.font.bold = True
-    p_repo.add_run("• Unified Full-Stack Web Application: ").font.color.rgb = DARK_SLATE
-    p_repo.add_run("http://localhost:8000\n").font.bold = True
-    p_repo.add_run("• Interactive OpenAPI Swagger Documentation: ").font.color.rgb = DARK_SLATE
-    p_repo.add_run("http://localhost:8000/docs\n").font.bold = True
-    p_repo.add_run("• Alternate Vite Frontend Dev Server: ").font.color.rgb = DARK_SLATE
-    p_repo.add_run("http://localhost:5173\n\n").font.bold = True
+    p_repo.add_run("• Frontend (Vercel): ").font.color.rgb = DARK_SLATE
+    r_vercel = p_repo.add_run("Deploy via Vercel — see Section 9 below for step-by-step instructions\n")
+    r_vercel.font.bold = True
+    r_vercel.font.italic = True
+    p_repo.add_run("• Backend API (Render): ").font.color.rgb = DARK_SLATE
+    r_render = p_repo.add_run("Deploy via Render — see Section 9 below for step-by-step instructions\n")
+    r_render.font.bold = True
+    r_render.font.italic = True
+    p_repo.add_run("• OpenAPI Docs: ").font.color.rgb = DARK_SLATE
+    p_repo.add_run("https://<render-service>.onrender.com/docs\n").font.bold = True
+    p_repo.add_run("• Local Dev Server: ").font.color.rgb = DARK_SLATE
+    p_repo.add_run("http://localhost:8000 (see Section 7 for local setup)\n\n").font.bold = True
 
-    r3 = p_repo.add_run("Repository Access Instructions (If Private):\n")
+    r3 = p_repo.add_run("Deployment Architecture:\n")
     r3.font.bold = True
-    p_repo.add_run(
+    dep_table = doc.add_table(rows=4, cols=3)
+    dep_table.style = "Table Grid"
+    dep_headers = ["Layer", "Platform", "Configuration"]
+    for i, h in enumerate(dep_headers):
+        cell = dep_table.rows[0].cells[i]
+        set_cell_background(cell, "D1FAE5")
+        cell.paragraphs[0].add_run(h).font.bold = True
+    dep_rows = [
+        ("Frontend", "Vercel", "Root: frontend/ | Build: npm run build | Output: dist/"),
+        ("Backend API", "Render (Docker)", "Dockerfile at root | PORT from env | Health: /api/health"),
+        ("RAG Knowledge", "Repo-controlled", "data/raw/*.json → ingest.py → TF-IDF index (no paid DB)"),
+    ]
+    for ri, (l, p, c) in enumerate(dep_rows, 1):
+        dep_table.rows[ri].cells[0].paragraphs[0].add_run(l)
+        dep_table.rows[ri].cells[1].paragraphs[0].add_run(p)
+        dep_table.rows[ri].cells[2].paragraphs[0].add_run(c)
+    doc.add_paragraph()
+
+    r_acc = doc.add_paragraph()
+    r_acc_run = r_acc.add_run("Repository Access Instructions (If Private):\n")
+    r_acc_run.font.bold = True
+    r_acc.add_run(
         "As instructed on Page 5 of the Challenge PDF, if the repository is set to private, "
         "collaborator access has been granted to the following reviewer accounts:\n"
     )
@@ -116,6 +143,7 @@ def create_submission_docx():
         p_acc = doc.add_paragraph(f"  • {email}")
         p_acc.runs[0].font.name = "Consolas"
         p_acc.runs[0].font.size = Pt(10)
+
 
     # -------------------------------------------------------------
     # SECTION 2: README.md Overview (Architecture, Schemas, Local Setup, CI/CD)
