@@ -1,0 +1,37 @@
+[
+  {
+    "id": "unep-pollinator-2020-01",
+    "title": "Pollinators and Pollination: Status and Trends",
+    "organization": "United Nations Environment Programme (UNEP)",
+    "authors": "UNEP World Conservation Monitoring Centre (UNEP-WCMC)",
+    "year": 2020,
+    "doi_or_url": "https://www.unep.org/resources/report/pollinators-and-pollination",
+    "topic": "Pollinator Decline, Agro-Chemical Pollution & Floral Strips",
+    "ecosystem_types": ["Intensive farmlands", "Perimeter hedgerows", "Orchards"],
+    "variables": ["pollution", "species_richness", "biodiversity", "human_impact"],
+    "content": "Intensive application of neonicotinoids and broad-spectrum organophosphate pesticides suppresses pollinator foraging navigation, immune competence, and larval survival, driving wild bee and syrphid fly species richness down by 40-65% in treated monocultures. Establishing non-crop perennial wildflower strips along field margins (comprising minimum 8-12 native nectar/pollen-rich species) provides clean floral refugia and pesticide-free nesting substrates. Within 1 to 2 seasons, native bee abundance increases 2.5 to 4-fold within 100 meters of the floral margins, while parasitoid wasp densities rise by 50%, naturally suppressing lepidopteran crop pests without chemical intervention.",
+    "quantitative_ranges": {
+      "pollinator_abundance_increase_fold": [2.5, 4.0],
+      "pest_natural_predator_increase_pct": [35, 60],
+      "time_horizon_seasons": [1, 2]
+    }
+  },
+  {
+    "id": "unep-water-pollution-2021-02",
+    "title": "A Snapshot of the World's Water Quality: Towards a global assessment",
+    "organization": "United Nations Environment Programme (UNEP)",
+    "authors": "UNEP Division of Early Warning and Assessment",
+    "year": 2021,
+    "doi_or_url": "https://www.unep.org/resources/publication/snapshot-worlds-water-quality",
+    "topic": "Agricultural Nutrient Pollution, Eutrophication & Riparian Buffers",
+    "ecosystem_types": ["Riparian zones", "Agricultural watersheds", "Freshwater wetlands"],
+    "variables": ["pollution", "soil_moisture", "habitat_diversity", "species_richness"],
+    "content": "Excessive nitrogen and phosphorus fertilizer runoff contaminates freshwater streams and adjacent wetlands, leading to algal blooms, hypoxia (dissolved oxygen < 2 mg/L), and massive collapse of aquatic macroinvertebrates and amphibian diversity. Planting multi-tiered riparian forest and native grass buffers (10-30 meters wide) intercepts overland runoff and filters 65% to 92% of nitrate and 50% to 85% of particulate phosphorus before it reaches water bodies. Riparian buffers also restore bank stability, shade the water column to lower temperatures by 2-3°C, and create critical habitat diversity for benthic organisms, odonates (dragonflies), and riparian birds.",
+    "quantitative_ranges": {
+      "nitrate_interception_pct": [65, 92],
+      "phosphorus_interception_pct": [50, 85],
+      "water_temperature_buffering_celsius": [2.0, 3.0],
+      "time_horizon_years": [2, 5]
+    }
+  }
+]

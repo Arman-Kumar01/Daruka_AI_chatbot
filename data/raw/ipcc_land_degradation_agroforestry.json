@@ -1,0 +1,38 @@
+[
+  {
+    "id": "ipcc-srcl-ch04-2019",
+    "title": "IPCC Special Report on Climate Change and Land: Land Degradation (Chapter 4)",
+    "organization": "Intergovernmental Panel on Climate Change (IPCC)",
+    "authors": "Olsson, L., H. Barbosa, S. Bhadwal, A. Cowie, et al.",
+    "year": 2019,
+    "doi_or_url": "https://www.ipcc.ch/srccl/chapter/chapter-4/",
+    "topic": "Agroforestry, Land Degradation & Multi-Trophic Biodiversity",
+    "ecosystem_types": ["Semi-arid zones", "Monoculture cropland", "Degraded pastures"],
+    "variables": ["land_use", "temperature", "rainfall", "species_richness", "soil_organic_carbon"],
+    "content": "Monoculture farming in semi-arid and water-scarce landscapes creates severe vulnerability to soil erosion and loss of trophic biodiversity. Incorporating multi-strata agroforestry (such as nitrogen-fixing Acacia, Faidherbia albida, or Gliricidia sepium intercropped with cereal crops) modifies the microclimate by reducing peak canopy and soil surface temperatures by 2.0°C to 4.5°C during high heat periods. Deep rooting systems lift subsoil moisture (hydraulic lift) into the upper root zone, sustaining understory vegetation and insect pollinators during dry spells. Peer-reviewed global meta-analyses documented by IPCC show agroforestry systems harbor 45% to 80% higher species richness of birds, beneficial arthropods, and fungal taxa compared to adjacent monoculture cereal plots.",
+    "quantitative_ranges": {
+      "temperature_reduction_celsius": [2.0, 4.5],
+      "biodiversity_species_richness_increase_pct": [45, 80],
+      "soil_erosion_reduction_pct": [50, 75],
+      "time_horizon_years": [3, 7]
+    }
+  },
+  {
+    "id": "ipcc-srcl-ch05-2019",
+    "title": "IPCC Special Report on Climate Change and Land: Food Security & Diversification (Chapter 5)",
+    "organization": "Intergovernmental Panel on Climate Change (IPCC)",
+    "authors": "Mbow, C., C. Rosenzweig, L.G. Barioni, T.G. Benton, et al.",
+    "year": 2019,
+    "doi_or_url": "https://www.ipcc.ch/srccl/chapter/chapter-5/",
+    "topic": "Crop Diversification, Intercropping & Soil Resilience",
+    "ecosystem_types": ["Arable land", "Semi-arid and sub-humid croplands"],
+    "variables": ["land_use", "soil_moisture", "rainfall", "biodiversity"],
+    "content": "Transitioning from monoculture wheat or maize to diversified strip-cropping or legume-cereal intercropping breaks continuous pest cycles, suppresses weed seed banks by 30-50%, and enhances functional agro-biodiversity. Intercropping legumes supplies biologically fixed nitrogen (30 to 80 kg N/ha/yr), reducing synthetic fertilizer demands by 25-40% and preventing nitrogen leaching into local watersheds. Over medium time horizons (2-4 growing seasons), diversified crop architectures enhance pollinator visitation duration by 35% and stabilize yield variance against intermittent rainfall anomalies.",
+    "quantitative_ranges": {
+      "biological_n_fixation_kg_per_ha": [30, 80],
+      "synthetic_n_reduction_pct": [25, 40],
+      "pollinator_visitation_increase_pct": [25, 40],
+      "time_horizon_seasons": [2, 4]
+    }
+  }
+]

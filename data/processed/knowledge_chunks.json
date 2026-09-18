@@ -1,0 +1,1002 @@
+[
+  {
+    "chunk_id": "peer-nature-agro-2021_c1",
+    "source_id": "peer-nature-agro-2021",
+    "title": "Global biodiversity and ecological benefits of cover crops in agroecosystems",
+    "organization": "Nature Communications / Agroecology Consortium",
+    "authors": "Tamburini, G., R. Bommarco, T. C. Kleijn, et al.",
+    "year": 2021,
+    "url": "https://doi.org/10.1038/s41467-020-19238-x",
+    "topic": "Legume Cover Crops, Soil Organic Carbon, and Microbial Networks",
+    "ecosystem_types": [
+      "Semi-arid croplands",
+      "Temperate grain fields",
+      "Degraded soils"
+    ],
+    "variables": [
+      "soil_organic_carbon",
+      "microbial_biomass",
+      "species_richness",
+      "soil_moisture"
+    ],
+    "text": "A comprehensive meta-analysis across 5,188 global agricultural trial sites demonstrates that introducing multi-species cover crops (particularly mixtures of hairy vetch, rye, and crimson clover) between grain harvest and planting increases total soil organic carbon stocks by 15.5% (95% CI: 12.1-19.4%) over 3 seasons.",
+    "quantitative_ranges": {
+      "soc_stock_increase_pct": [
+        12.1,
+        19.4
+      ],
+      "amf_hyphal_density_increase_pct": [
+        50,
+        75
+      ],
+      "water_retention_increase_pct": [
+        18,
+        28
+      ],
+      "time_horizon_seasons": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "chunk_id": "peer-nature-agro-2021_c2",
+    "source_id": "peer-nature-agro-2021",
+    "title": "Global biodiversity and ecological benefits of cover crops in agroecosystems",
+    "organization": "Nature Communications / Agroecology Consortium",
+    "authors": "Tamburini, G., R. Bommarco, T. C. Kleijn, et al.",
+    "year": 2021,
+    "url": "https://doi.org/10.1038/s41467-020-19238-x",
+    "topic": "Legume Cover Crops, Soil Organic Carbon, and Microbial Networks",
+    "ecosystem_types": [
+      "Semi-arid croplands",
+      "Temperate grain fields",
+      "Degraded soils"
+    ],
+    "variables": [
+      "soil_organic_carbon",
+      "microbial_biomass",
+      "species_richness",
+      "soil_moisture"
+    ],
+    "text": "The rhizosphere exudates stimulate arbuscular mycorrhizal fungi (AMF) hyphal length density by 62%, which physically binds soil particles into water-stable macro-aggregates (>250 µm). In dryland and semi-arid conditions, this increased pore volume improves hydraulic conductivity and available water retention by 18-28%, creating essential resilience against high summer temperatures and intermittent drought.",
+    "quantitative_ranges": {
+      "soc_stock_increase_pct": [
+        12.1,
+        19.4
+      ],
+      "amf_hyphal_density_increase_pct": [
+        50,
+        75
+      ],
+      "water_retention_increase_pct": [
+        18,
+        28
+      ],
+      "time_horizon_seasons": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "chunk_id": "peer-soil-biology-2022_c1",
+    "source_id": "peer-soil-biology-2022",
+    "title": "Remediating agricultural waterlogging through bioswales and riparian vegetation",
+    "organization": "Journal of Applied Ecology & British Ecological Society",
+    "authors": "Wilkinson, M. E., P. F. Quinn, N. J. Barber, et al.",
+    "year": 2022,
+    "url": "https://doi.org/10.1111/1365-2664.14112",
+    "topic": "High Soil Moisture, Waterlogging Remediation & Wetland Biodiversity",
+    "ecosystem_types": [
+      "Lowland agricultural floodplains",
+      "Poorly drained soils",
+      "Waterlogged fields"
+    ],
+    "variables": [
+      "soil_moisture",
+      "habitat_diversity",
+      "species_richness",
+      "land_use"
+    ],
+    "text": "In intensively farmed floodplains and lowlands, prolonged soil waterlogging causes anoxic conditions (redox potential Eh < +200 mV) that suffocate aerobic soil fauna and foster denitrifying bacteria, causing 30-50% root rot and nitrogen gas loss. Constructing bioswales, retention depressions, and planting deep-rooted flood-tolerant native vegetation (such as Salix, Alnus glutinosa, and Carex sedges) regulates excessive moisture.",
+    "quantitative_ranges": {
+      "water_table_regulation_depth_cm": [
+        30,
+        60
+      ],
+      "aquatic_insect_richness_increase_pct": [
+        70,
+        110
+      ],
+      "redox_recovery_time_days": [
+        3,
+        7
+      ],
+      "time_horizon_years": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "chunk_id": "peer-soil-biology-2022_c2",
+    "source_id": "peer-soil-biology-2022",
+    "title": "Remediating agricultural waterlogging through bioswales and riparian vegetation",
+    "organization": "Journal of Applied Ecology & British Ecological Society",
+    "authors": "Wilkinson, M. E., P. F. Quinn, N. J. Barber, et al.",
+    "year": 2022,
+    "url": "https://doi.org/10.1111/1365-2664.14112",
+    "topic": "High Soil Moisture, Waterlogging Remediation & Wetland Biodiversity",
+    "ecosystem_types": [
+      "Lowland agricultural floodplains",
+      "Poorly drained soils",
+      "Waterlogged fields"
+    ],
+    "variables": [
+      "soil_moisture",
+      "habitat_diversity",
+      "species_richness",
+      "land_use"
+    ],
+    "text": "These bioswales divert surface ponding, lower the perched water table by 30-60 cm within 48 hours post-storm, and convert saturated wasteland into wetland habitat mosaics. This restores soil gas exchange while boosting amphibian, dragonfly, and aquatic beetle richness by 70-110% within 2 years.",
+    "quantitative_ranges": {
+      "water_table_regulation_depth_cm": [
+        30,
+        60
+      ],
+      "aquatic_insect_richness_increase_pct": [
+        70,
+        110
+      ],
+      "redox_recovery_time_days": [
+        3,
+        7
+      ],
+      "time_horizon_years": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "chunk_id": "peer-science-poll-2020_c1",
+    "source_id": "peer-science-poll-2020",
+    "title": "Ecological corridors mitigate habitat fragmentation across heterogeneous farming landscapes",
+    "organization": "Science / American Association for the Advancement of Science",
+    "authors": "Damschen, E. I., L. A. Brudvig, N. M. Haddad, et al.",
+    "year": 2020,
+    "url": "https://doi.org/10.1126/science.aax8953",
+    "topic": "Habitat Corridors, Seed Dispersal & Plant Species Persistence",
+    "ecosystem_types": [
+      "Fragmented agricultural land",
+      "Fragmented woodland",
+      "Monoculture margins"
+    ],
+    "variables": [
+      "land_use",
+      "habitat_diversity",
+      "species_richness",
+      "human_impact"
+    ],
+    "text": "An 18-year controlled landscape experiment reveals that connected habitat fragments support 14% more plant species richness per patch than isolated fragments, and this biodiversity advantage continues to accumulate without plateauing (+5% additional species per decade). Connected patches facilitate seed dispersal by frugivorous birds and pollinator movement across agricultural barriers.",
+    "quantitative_ranges": {
+      "species_richness_advantage_pct": [
+        14,
+        25
+      ],
+      "extinction_rate_reduction_pct": [
+        30,
+        45
+      ],
+      "corridor_width_meters": [
+        10,
+        20
+      ],
+      "time_horizon_years": [
+        5,
+        10
+      ]
+    }
+  },
+  {
+    "chunk_id": "peer-science-poll-2020_c2",
+    "source_id": "peer-science-poll-2020",
+    "title": "Ecological corridors mitigate habitat fragmentation across heterogeneous farming landscapes",
+    "organization": "Science / American Association for the Advancement of Science",
+    "authors": "Damschen, E. I., L. A. Brudvig, N. M. Haddad, et al.",
+    "year": 2020,
+    "url": "https://doi.org/10.1126/science.aax8953",
+    "topic": "Habitat Corridors, Seed Dispersal & Plant Species Persistence",
+    "ecosystem_types": [
+      "Fragmented agricultural land",
+      "Fragmented woodland",
+      "Monoculture margins"
+    ],
+    "variables": [
+      "land_use",
+      "habitat_diversity",
+      "species_richness",
+      "human_impact"
+    ],
+    "text": "Hedgerows and woodland corridors spanning 10-20 m width counteract monoculture isolation, reducing local extinction rates of vulnerable herbaceous species by 38% over medium to long term horizons (5-10 years).",
+    "quantitative_ranges": {
+      "species_richness_advantage_pct": [
+        14,
+        25
+      ],
+      "extinction_rate_reduction_pct": [
+        30,
+        45
+      ],
+      "corridor_width_meters": [
+        10,
+        20
+      ],
+      "time_horizon_years": [
+        5,
+        10
+      ]
+    }
+  },
+  {
+    "chunk_id": "peer-environ-pollution-2023_c1",
+    "source_id": "peer-environ-pollution-2023",
+    "title": "Phytoremediation and vegetative filter strips for pesticide and heavy metal mitigation",
+    "organization": "Environmental Pollution & Ecological Engineering",
+    "authors": "Kumar, S., P. Sharma, V. K. Garg, et al.",
+    "year": 2023,
+    "url": "https://doi.org/10.1016/j.envpol.2023.121845",
+    "topic": "Pollution Remediation, Pesticide Degradation & Vegetative Buffers",
+    "ecosystem_types": [
+      "Pesticide-heavy croplands",
+      "Industrial-adjacent agricultural zones",
+      "Degraded soils"
+    ],
+    "variables": [
+      "pollution",
+      "soil_ph",
+      "species_richness",
+      "biodiversity"
+    ],
+    "text": "Excessive agrochemical residues (organophosphates, triazines, copper/zinc fungicides) accumulate in topsoil, depressing earthworm survival by 70% and inhibiting nitrogenase enzyme activity. Planting hyperaccumulating and pesticide-degrading native vegetation (such as Helianthus annuus, Vetiver grass Chrysopogon zizanioides, and Populus species) accelerates rhizodegradation.",
+    "quantitative_ranges": {
+      "pesticide_degradation_acceleration_fold": [
+        3,
+        5
+      ],
+      "bioaccumulation_reduction_pct": [
+        55,
+        80
+      ],
+      "recolonization_time_months": [
+        18,
+        36
+      ]
+    }
+  },
+  {
+    "chunk_id": "peer-environ-pollution-2023_c2",
+    "source_id": "peer-environ-pollution-2023",
+    "title": "Phytoremediation and vegetative filter strips for pesticide and heavy metal mitigation",
+    "organization": "Environmental Pollution & Ecological Engineering",
+    "authors": "Kumar, S., P. Sharma, V. K. Garg, et al.",
+    "year": 2023,
+    "url": "https://doi.org/10.1016/j.envpol.2023.121845",
+    "topic": "Pollution Remediation, Pesticide Degradation & Vegetative Buffers",
+    "ecosystem_types": [
+      "Pesticide-heavy croplands",
+      "Industrial-adjacent agricultural zones",
+      "Degraded soils"
+    ],
+    "variables": [
+      "pollution",
+      "soil_ph",
+      "species_richness",
+      "biodiversity"
+    ],
+    "text": "Microbial communities cultivated around these deep fibrous root networks degrade organic pesticide molecules 3 to 5 times faster than bare soil, reducing toxic bioaccumulation in the food web by 55-80% over 18 to 36 months, allowing beneficial soil macrofauna to recolonize.",
+    "quantitative_ranges": {
+      "pesticide_degradation_acceleration_fold": [
+        3,
+        5
+      ],
+      "bioaccumulation_reduction_pct": [
+        55,
+        80
+      ],
+      "recolonization_time_months": [
+        18,
+        36
+      ]
+    }
+  },
+  {
+    "chunk_id": "fao-soc-2017-01_c1",
+    "source_id": "fao-soc-2017-01",
+    "title": "Soil Organic Carbon: the hidden potential",
+    "organization": "Food and Agriculture Organization of the United Nations (FAO)",
+    "authors": "FAO Intergovernmental Technical Panel on Soils (ITPS)",
+    "year": 2017,
+    "url": "https://www.fao.org/documents/card/en/c/bc55f9e4-539c-4573-8cb2-df38d21b7145/",
+    "topic": "Soil Organic Carbon & Microbial Diversity",
+    "ecosystem_types": [
+      "Semi-arid",
+      "Arable cropland",
+      "Temperate drylands"
+    ],
+    "variables": [
+      "soil_organic_carbon",
+      "microbial_biomass",
+      "soil_moisture",
+      "biodiversity"
+    ],
+    "text": "Soil organic carbon (SOC) is critical for biological activity and terrestrial ecosystem functioning. An increase of 1% absolute soil organic matter or 0.5% SOC in the topsoil (0-30 cm) enhances available water capacity (AWC) by an estimated 1.5% to 3.7% volumetric moisture depending on soil texture. In semi-arid regions with baseline SOC < 0.5%, introducing legume-based cover crops (e.g., Vicia villosa, Medicago sativa) and residue retention increases SOC by 0.15% to 0.40% C/yr (~15-25% relative increase over 2-3 years).",
+    "quantitative_ranges": {
+      "soc_increase_relative_pct": [
+        15,
+        25
+      ],
+      "time_horizon_years": [
+        2,
+        3
+      ],
+      "available_water_capacity_increase_pct": [
+        1.5,
+        3.7
+      ],
+      "microbial_biomass_increase_pct": [
+        20,
+        45
+      ]
+    }
+  },
+  {
+    "chunk_id": "fao-soc-2017-01_c2",
+    "source_id": "fao-soc-2017-01",
+    "title": "Soil Organic Carbon: the hidden potential",
+    "organization": "Food and Agriculture Organization of the United Nations (FAO)",
+    "authors": "FAO Intergovernmental Technical Panel on Soils (ITPS)",
+    "year": 2017,
+    "url": "https://www.fao.org/documents/card/en/c/bc55f9e4-539c-4573-8cb2-df38d21b7145/",
+    "topic": "Soil Organic Carbon & Microbial Diversity",
+    "ecosystem_types": [
+      "Semi-arid",
+      "Arable cropland",
+      "Temperate drylands"
+    ],
+    "variables": [
+      "soil_organic_carbon",
+      "microbial_biomass",
+      "soil_moisture",
+      "biodiversity"
+    ],
+    "text": "This stimulates heterotrophic microbial biomass carbon by 20-45%, accelerating nutrient cycling, glomalin production, and aggregate stability.",
+    "quantitative_ranges": {
+      "soc_increase_relative_pct": [
+        15,
+        25
+      ],
+      "time_horizon_years": [
+        2,
+        3
+      ],
+      "available_water_capacity_increase_pct": [
+        1.5,
+        3.7
+      ],
+      "microbial_biomass_increase_pct": [
+        20,
+        45
+      ]
+    }
+  },
+  {
+    "chunk_id": "fao-soil-ph-2020-02_c1",
+    "source_id": "fao-soil-ph-2020-02",
+    "title": "Global Soil pH and Nutrient Availability Management",
+    "organization": "Food and Agriculture Organization (FAO) & Global Soil Partnership",
+    "authors": "FAO Global Soil Doctors Programme",
+    "year": 2020,
+    "url": "https://www.fao.org/global-soil-partnership/resources/highlights/detail/en/c/1301053/",
+    "topic": "Soil pH Remediation and Macro/Micro Invertebrate Diversity",
+    "ecosystem_types": [
+      "Acidic croplands",
+      "Degraded agricultural soils",
+      "Intensive monoculture"
+    ],
+    "variables": [
+      "soil_ph",
+      "nutrient_availability",
+      "earthworm_density",
+      "species_richness"
+    ],
+    "text": "Soil pH strongly modulates nutrient availability and below-ground biodiversity. In soils with pH < 5.5, aluminum and manganese toxicity inhibit root elongation and drastically suppress beneficial nitrifying bacteria and earthworm populations (Lumbricidae). Applying calcitic or dolomitic agricultural limestone combined with biochar neutralizes exchangeable acidity (raising pH toward optimal 6.2-6.8), which elevates cation exchange capacity (CEC) and increases earthworm abundance by 35-60% within 12-24 months.",
+    "quantitative_ranges": {
+      "optimal_ph_range": [
+        6.2,
+        6.8
+      ],
+      "earthworm_abundance_increase_pct": [
+        35,
+        60
+      ],
+      "remediation_time_horizon_months": [
+        12,
+        24
+      ]
+    }
+  },
+  {
+    "chunk_id": "fao-soil-ph-2020-02_c2",
+    "source_id": "fao-soil-ph-2020-02",
+    "title": "Global Soil pH and Nutrient Availability Management",
+    "organization": "Food and Agriculture Organization (FAO) & Global Soil Partnership",
+    "authors": "FAO Global Soil Doctors Programme",
+    "year": 2020,
+    "url": "https://www.fao.org/global-soil-partnership/resources/highlights/detail/en/c/1301053/",
+    "topic": "Soil pH Remediation and Macro/Micro Invertebrate Diversity",
+    "ecosystem_types": [
+      "Acidic croplands",
+      "Degraded agricultural soils",
+      "Intensive monoculture"
+    ],
+    "variables": [
+      "soil_ph",
+      "nutrient_availability",
+      "earthworm_density",
+      "species_richness"
+    ],
+    "text": "In alkaline soils (pH > 8.0), elemental sulfur and organic mulching release sulfate and organic acids, lowering rhizosphere pH and unlocking immobilized phosphorus and micronutrients (Fe, Zn, Mn).",
+    "quantitative_ranges": {
+      "optimal_ph_range": [
+        6.2,
+        6.8
+      ],
+      "earthworm_abundance_increase_pct": [
+        35,
+        60
+      ],
+      "remediation_time_horizon_months": [
+        12,
+        24
+      ]
+    }
+  },
+  {
+    "chunk_id": "fao-water-soil-2021-03_c1",
+    "source_id": "fao-water-soil-2021-03",
+    "title": "The State of the World's Land and Water Resources for Food and Agriculture (SOLAW 2021)",
+    "organization": "Food and Agriculture Organization (FAO)",
+    "authors": "FAO Land and Water Division",
+    "year": 2021,
+    "url": "https://doi.org/10.4060/cb7654en",
+    "topic": "Soil Moisture Retention & Infiltration under Conservation Tillage",
+    "ecosystem_types": [
+      "Semi-arid croplands",
+      "Rainfed agricultural systems",
+      "Drylands"
+    ],
+    "variables": [
+      "soil_moisture",
+      "rainfall",
+      "tillage",
+      "soil_organic_carbon"
+    ],
+    "text": "Conventional continuous tillage in drylands and semi-arid zones accelerates organic matter oxidation and creates subsoil hardpans, reducing rainfall infiltration by up to 50% and causing catastrophic runoff. Transitioning to zero-tillage or minimum-tillage with permanent organic soil cover increases water infiltration rates by 40-70% and reduces soil surface evaporation.",
+    "quantitative_ranges": {
+      "infiltration_rate_increase_pct": [
+        40,
+        70
+      ],
+      "evaporation_reduction_pct": [
+        25,
+        45
+      ],
+      "plant_available_water_buffer_mm": [
+        10,
+        25
+      ]
+    }
+  },
+  {
+    "chunk_id": "fao-water-soil-2021-03_c2",
+    "source_id": "fao-water-soil-2021-03",
+    "title": "The State of the World's Land and Water Resources for Food and Agriculture (SOLAW 2021)",
+    "organization": "Food and Agriculture Organization (FAO)",
+    "authors": "FAO Land and Water Division",
+    "year": 2021,
+    "url": "https://doi.org/10.4060/cb7654en",
+    "topic": "Soil Moisture Retention & Infiltration under Conservation Tillage",
+    "ecosystem_types": [
+      "Semi-arid croplands",
+      "Rainfed agricultural systems",
+      "Drylands"
+    ],
+    "variables": [
+      "soil_moisture",
+      "rainfall",
+      "tillage",
+      "soil_organic_carbon"
+    ],
+    "text": "Under low rainfall (<400 mm/year), mulched soil retains 10-25 mm more plant-available water throughout the reproductive phase, buffering native soil microbial communities and ephemeral wildflower biodiversity against thermal and moisture stress.",
+    "quantitative_ranges": {
+      "infiltration_rate_increase_pct": [
+        40,
+        70
+      ],
+      "evaporation_reduction_pct": [
+        25,
+        45
+      ],
+      "plant_available_water_buffer_mm": [
+        10,
+        25
+      ]
+    }
+  },
+  {
+    "chunk_id": "ipbes-global-assessment-2019_c1",
+    "source_id": "ipbes-global-assessment-2019",
+    "title": "Global Assessment Report on Biodiversity and Ecosystem Services",
+    "organization": "Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES)",
+    "authors": "Díaz, S., J. Settele, E. S. Brondízio, H. T. Ngo, et al.",
+    "year": 2019,
+    "url": "https://doi.org/10.5281/zenodo.3831735",
+    "topic": "Habitat Fragmentation, Ecological Corridors & Metapopulation Dynamics",
+    "ecosystem_types": [
+      "Fragmented agricultural landscapes",
+      "Forest fragments",
+      "Grassland mosaics"
+    ],
+    "variables": [
+      "habitat_diversity",
+      "land_use",
+      "species_richness",
+      "deforestation"
+    ],
+    "text": "Land conversion and habitat fragmentation are the single largest direct driver of terrestrial biodiversity loss worldwide. When contiguous habitat is dissected into isolated patches under 10 hectares, edge effects (desiccation, invasive plant encroachment, elevated predation) penetrate up to 100 meters inward, reducing core functional habitat by 60-90%.",
+    "quantitative_ranges": {
+      "functional_connectivity_increase_pct": [
+        200,
+        350
+      ],
+      "species_richness_increase_pct": [
+        30,
+        55
+      ],
+      "edge_effect_penetration_meters": [
+        50,
+        100
+      ],
+      "time_horizon_years": [
+        3,
+        6
+      ]
+    }
+  },
+  {
+    "chunk_id": "ipbes-global-assessment-2019_c2",
+    "source_id": "ipbes-global-assessment-2019",
+    "title": "Global Assessment Report on Biodiversity and Ecosystem Services",
+    "organization": "Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES)",
+    "authors": "Díaz, S., J. Settele, E. S. Brondízio, H. T. Ngo, et al.",
+    "year": 2019,
+    "url": "https://doi.org/10.5281/zenodo.3831735",
+    "topic": "Habitat Fragmentation, Ecological Corridors & Metapopulation Dynamics",
+    "ecosystem_types": [
+      "Fragmented agricultural landscapes",
+      "Forest fragments",
+      "Grassland mosaics"
+    ],
+    "variables": [
+      "habitat_diversity",
+      "land_use",
+      "species_richness",
+      "deforestation"
+    ],
+    "text": "Establishing continuous biological corridors and living hedgerows (minimum width 5-15 meters) connecting isolated woodland fragments restores gene flow, increases functional connectivity by 300%, and increases local bird, bat, and small mammal species richness by 30-55% over a 3 to 6 year timeframe.",
+    "quantitative_ranges": {
+      "functional_connectivity_increase_pct": [
+        200,
+        350
+      ],
+      "species_richness_increase_pct": [
+        30,
+        55
+      ],
+      "edge_effect_penetration_meters": [
+        50,
+        100
+      ],
+      "time_horizon_years": [
+        3,
+        6
+      ]
+    }
+  },
+  {
+    "chunk_id": "ipbes-land-degradation-2018_c1",
+    "source_id": "ipbes-land-degradation-2018",
+    "title": "The Assessment Report on Land Degradation and Restoration",
+    "organization": "Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES)",
+    "authors": "Montanarella, L., R. Scholes, A. Brainich, et al.",
+    "year": 2018,
+    "url": "https://doi.org/10.5281/zenodo.3237392",
+    "topic": "Ecosystem Restoration, Soil Rebuilding & Trophic Cascades",
+    "ecosystem_types": [
+      "Degraded rangelands",
+      "Intensive monoculture farms",
+      "Post-industrial soils"
+    ],
+    "variables": [
+      "soil_organic_carbon",
+      "habitat_diversity",
+      "species_richness",
+      "human_impact"
+    ],
+    "text": "Ecological restoration of degraded agricultural land requires simultaneous below-ground soil microbial rehabilitation and above-ground structural diversification. Re-establishing native perennial polycultures and multi-species vegetative covers elevates fungal-to-bacterial biomass ratios from 0.1 (degraded agricultural soil) toward 0.8-1.2 (healthy regenerative ecosystem).",
+    "quantitative_ranges": {
+      "fungal_to_bacterial_ratio_target": [
+        0.8,
+        1.2
+      ],
+      "trophic_cascade_response_time_years": [
+        3,
+        5
+      ],
+      "predatory_beetle_density_increase_pct": [
+        40,
+        75
+      ]
+    }
+  },
+  {
+    "chunk_id": "ipbes-land-degradation-2018_c2",
+    "source_id": "ipbes-land-degradation-2018",
+    "title": "The Assessment Report on Land Degradation and Restoration",
+    "organization": "Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES)",
+    "authors": "Montanarella, L., R. Scholes, A. Brainich, et al.",
+    "year": 2018,
+    "url": "https://doi.org/10.5281/zenodo.3237392",
+    "topic": "Ecosystem Restoration, Soil Rebuilding & Trophic Cascades",
+    "ecosystem_types": [
+      "Degraded rangelands",
+      "Intensive monoculture farms",
+      "Post-industrial soils"
+    ],
+    "variables": [
+      "soil_organic_carbon",
+      "habitat_diversity",
+      "species_richness",
+      "human_impact"
+    ],
+    "text": "This creates micro-habitats for ground-nesting solitary bees, predatory carabid beetles, and mycorrhizal fungi networks, triggering trophic cascades that support insectivorous birds and small reptiles within 3 to 5 years.",
+    "quantitative_ranges": {
+      "fungal_to_bacterial_ratio_target": [
+        0.8,
+        1.2
+      ],
+      "trophic_cascade_response_time_years": [
+        3,
+        5
+      ],
+      "predatory_beetle_density_increase_pct": [
+        40,
+        75
+      ]
+    }
+  },
+  {
+    "chunk_id": "ipcc-srcl-ch04-2019_c1",
+    "source_id": "ipcc-srcl-ch04-2019",
+    "title": "IPCC Special Report on Climate Change and Land: Land Degradation (Chapter 4)",
+    "organization": "Intergovernmental Panel on Climate Change (IPCC)",
+    "authors": "Olsson, L., H. Barbosa, S. Bhadwal, A. Cowie, et al.",
+    "year": 2019,
+    "url": "https://www.ipcc.ch/srccl/chapter/chapter-4/",
+    "topic": "Agroforestry, Land Degradation & Multi-Trophic Biodiversity",
+    "ecosystem_types": [
+      "Semi-arid zones",
+      "Monoculture cropland",
+      "Degraded pastures"
+    ],
+    "variables": [
+      "land_use",
+      "temperature",
+      "rainfall",
+      "species_richness",
+      "soil_organic_carbon"
+    ],
+    "text": "Monoculture farming in semi-arid and water-scarce landscapes creates severe vulnerability to soil erosion and loss of trophic biodiversity. Incorporating multi-strata agroforestry (such as nitrogen-fixing Acacia, Faidherbia albida, or Gliricidia sepium intercropped with cereal crops) modifies the microclimate by reducing peak canopy and soil surface temperatures by 2.0°C to 4.5°C during high heat periods.",
+    "quantitative_ranges": {
+      "temperature_reduction_celsius": [
+        2.0,
+        4.5
+      ],
+      "biodiversity_species_richness_increase_pct": [
+        45,
+        80
+      ],
+      "soil_erosion_reduction_pct": [
+        50,
+        75
+      ],
+      "time_horizon_years": [
+        3,
+        7
+      ]
+    }
+  },
+  {
+    "chunk_id": "ipcc-srcl-ch04-2019_c2",
+    "source_id": "ipcc-srcl-ch04-2019",
+    "title": "IPCC Special Report on Climate Change and Land: Land Degradation (Chapter 4)",
+    "organization": "Intergovernmental Panel on Climate Change (IPCC)",
+    "authors": "Olsson, L., H. Barbosa, S. Bhadwal, A. Cowie, et al.",
+    "year": 2019,
+    "url": "https://www.ipcc.ch/srccl/chapter/chapter-4/",
+    "topic": "Agroforestry, Land Degradation & Multi-Trophic Biodiversity",
+    "ecosystem_types": [
+      "Semi-arid zones",
+      "Monoculture cropland",
+      "Degraded pastures"
+    ],
+    "variables": [
+      "land_use",
+      "temperature",
+      "rainfall",
+      "species_richness",
+      "soil_organic_carbon"
+    ],
+    "text": "Deep rooting systems lift subsoil moisture (hydraulic lift) into the upper root zone, sustaining understory vegetation and insect pollinators during dry spells. Peer-reviewed global meta-analyses documented by IPCC show agroforestry systems harbor 45% to 80% higher species richness of birds, beneficial arthropods, and fungal taxa compared to adjacent monoculture cereal plots.",
+    "quantitative_ranges": {
+      "temperature_reduction_celsius": [
+        2.0,
+        4.5
+      ],
+      "biodiversity_species_richness_increase_pct": [
+        45,
+        80
+      ],
+      "soil_erosion_reduction_pct": [
+        50,
+        75
+      ],
+      "time_horizon_years": [
+        3,
+        7
+      ]
+    }
+  },
+  {
+    "chunk_id": "ipcc-srcl-ch05-2019_c1",
+    "source_id": "ipcc-srcl-ch05-2019",
+    "title": "IPCC Special Report on Climate Change and Land: Food Security & Diversification (Chapter 5)",
+    "organization": "Intergovernmental Panel on Climate Change (IPCC)",
+    "authors": "Mbow, C., C. Rosenzweig, L.G. Barioni, T.G. Benton, et al.",
+    "year": 2019,
+    "url": "https://www.ipcc.ch/srccl/chapter/chapter-5/",
+    "topic": "Crop Diversification, Intercropping & Soil Resilience",
+    "ecosystem_types": [
+      "Arable land",
+      "Semi-arid and sub-humid croplands"
+    ],
+    "variables": [
+      "land_use",
+      "soil_moisture",
+      "rainfall",
+      "biodiversity"
+    ],
+    "text": "Transitioning from monoculture wheat or maize to diversified strip-cropping or legume-cereal intercropping breaks continuous pest cycles, suppresses weed seed banks by 30-50%, and enhances functional agro-biodiversity. Intercropping legumes supplies biologically fixed nitrogen (30 to 80 kg N/ha/yr), reducing synthetic fertilizer demands by 25-40% and preventing nitrogen leaching into local watersheds.",
+    "quantitative_ranges": {
+      "biological_n_fixation_kg_per_ha": [
+        30,
+        80
+      ],
+      "synthetic_n_reduction_pct": [
+        25,
+        40
+      ],
+      "pollinator_visitation_increase_pct": [
+        25,
+        40
+      ],
+      "time_horizon_seasons": [
+        2,
+        4
+      ]
+    }
+  },
+  {
+    "chunk_id": "ipcc-srcl-ch05-2019_c2",
+    "source_id": "ipcc-srcl-ch05-2019",
+    "title": "IPCC Special Report on Climate Change and Land: Food Security & Diversification (Chapter 5)",
+    "organization": "Intergovernmental Panel on Climate Change (IPCC)",
+    "authors": "Mbow, C., C. Rosenzweig, L.G. Barioni, T.G. Benton, et al.",
+    "year": 2019,
+    "url": "https://www.ipcc.ch/srccl/chapter/chapter-5/",
+    "topic": "Crop Diversification, Intercropping & Soil Resilience",
+    "ecosystem_types": [
+      "Arable land",
+      "Semi-arid and sub-humid croplands"
+    ],
+    "variables": [
+      "land_use",
+      "soil_moisture",
+      "rainfall",
+      "biodiversity"
+    ],
+    "text": "Over medium time horizons (2-4 growing seasons), diversified crop architectures enhance pollinator visitation duration by 35% and stabilize yield variance against intermittent rainfall anomalies.",
+    "quantitative_ranges": {
+      "biological_n_fixation_kg_per_ha": [
+        30,
+        80
+      ],
+      "synthetic_n_reduction_pct": [
+        25,
+        40
+      ],
+      "pollinator_visitation_increase_pct": [
+        25,
+        40
+      ],
+      "time_horizon_seasons": [
+        2,
+        4
+      ]
+    }
+  },
+  {
+    "chunk_id": "unep-pollinator-2020-01_c1",
+    "source_id": "unep-pollinator-2020-01",
+    "title": "Pollinators and Pollination: Status and Trends",
+    "organization": "United Nations Environment Programme (UNEP)",
+    "authors": "UNEP World Conservation Monitoring Centre (UNEP-WCMC)",
+    "year": 2020,
+    "url": "https://www.unep.org/resources/report/pollinators-and-pollination",
+    "topic": "Pollinator Decline, Agro-Chemical Pollution & Floral Strips",
+    "ecosystem_types": [
+      "Intensive farmlands",
+      "Perimeter hedgerows",
+      "Orchards"
+    ],
+    "variables": [
+      "pollution",
+      "species_richness",
+      "biodiversity",
+      "human_impact"
+    ],
+    "text": "Intensive application of neonicotinoids and broad-spectrum organophosphate pesticides suppresses pollinator foraging navigation, immune competence, and larval survival, driving wild bee and syrphid fly species richness down by 40-65% in treated monocultures. Establishing non-crop perennial wildflower strips along field margins (comprising minimum 8-12 native nectar/pollen-rich species) provides clean floral refugia and pesticide-free nesting substrates.",
+    "quantitative_ranges": {
+      "pollinator_abundance_increase_fold": [
+        2.5,
+        4.0
+      ],
+      "pest_natural_predator_increase_pct": [
+        35,
+        60
+      ],
+      "time_horizon_seasons": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "chunk_id": "unep-pollinator-2020-01_c2",
+    "source_id": "unep-pollinator-2020-01",
+    "title": "Pollinators and Pollination: Status and Trends",
+    "organization": "United Nations Environment Programme (UNEP)",
+    "authors": "UNEP World Conservation Monitoring Centre (UNEP-WCMC)",
+    "year": 2020,
+    "url": "https://www.unep.org/resources/report/pollinators-and-pollination",
+    "topic": "Pollinator Decline, Agro-Chemical Pollution & Floral Strips",
+    "ecosystem_types": [
+      "Intensive farmlands",
+      "Perimeter hedgerows",
+      "Orchards"
+    ],
+    "variables": [
+      "pollution",
+      "species_richness",
+      "biodiversity",
+      "human_impact"
+    ],
+    "text": "Within 1 to 2 seasons, native bee abundance increases 2.5 to 4-fold within 100 meters of the floral margins, while parasitoid wasp densities rise by 50%, naturally suppressing lepidopteran crop pests without chemical intervention.",
+    "quantitative_ranges": {
+      "pollinator_abundance_increase_fold": [
+        2.5,
+        4.0
+      ],
+      "pest_natural_predator_increase_pct": [
+        35,
+        60
+      ],
+      "time_horizon_seasons": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "chunk_id": "unep-water-pollution-2021-02_c1",
+    "source_id": "unep-water-pollution-2021-02",
+    "title": "A Snapshot of the World's Water Quality: Towards a global assessment",
+    "organization": "United Nations Environment Programme (UNEP)",
+    "authors": "UNEP Division of Early Warning and Assessment",
+    "year": 2021,
+    "url": "https://www.unep.org/resources/publication/snapshot-worlds-water-quality",
+    "topic": "Agricultural Nutrient Pollution, Eutrophication & Riparian Buffers",
+    "ecosystem_types": [
+      "Riparian zones",
+      "Agricultural watersheds",
+      "Freshwater wetlands"
+    ],
+    "variables": [
+      "pollution",
+      "soil_moisture",
+      "habitat_diversity",
+      "species_richness"
+    ],
+    "text": "Excessive nitrogen and phosphorus fertilizer runoff contaminates freshwater streams and adjacent wetlands, leading to algal blooms, hypoxia (dissolved oxygen < 2 mg/L), and massive collapse of aquatic macroinvertebrates and amphibian diversity. Planting multi-tiered riparian forest and native grass buffers (10-30 meters wide) intercepts overland runoff and filters 65% to 92% of nitrate and 50% to 85% of particulate phosphorus before it reaches water bodies.",
+    "quantitative_ranges": {
+      "nitrate_interception_pct": [
+        65,
+        92
+      ],
+      "phosphorus_interception_pct": [
+        50,
+        85
+      ],
+      "water_temperature_buffering_celsius": [
+        2.0,
+        3.0
+      ],
+      "time_horizon_years": [
+        2,
+        5
+      ]
+    }
+  },
+  {
+    "chunk_id": "unep-water-pollution-2021-02_c2",
+    "source_id": "unep-water-pollution-2021-02",
+    "title": "A Snapshot of the World's Water Quality: Towards a global assessment",
+    "organization": "United Nations Environment Programme (UNEP)",
+    "authors": "UNEP Division of Early Warning and Assessment",
+    "year": 2021,
+    "url": "https://www.unep.org/resources/publication/snapshot-worlds-water-quality",
+    "topic": "Agricultural Nutrient Pollution, Eutrophication & Riparian Buffers",
+    "ecosystem_types": [
+      "Riparian zones",
+      "Agricultural watersheds",
+      "Freshwater wetlands"
+    ],
+    "variables": [
+      "pollution",
+      "soil_moisture",
+      "habitat_diversity",
+      "species_richness"
+    ],
+    "text": "Riparian buffers also restore bank stability, shade the water column to lower temperatures by 2-3°C, and create critical habitat diversity for benthic organisms, odonates (dragonflies), and riparian birds.",
+    "quantitative_ranges": {
+      "nitrate_interception_pct": [
+        65,
+        92
+      ],
+      "phosphorus_interception_pct": [
+        50,
+        85
+      ],
+      "water_temperature_buffering_celsius": [
+        2.0,
+        3.0
+      ],
+      "time_horizon_years": [
+        2,
+        5
+      ]
+    }
+  }
+]

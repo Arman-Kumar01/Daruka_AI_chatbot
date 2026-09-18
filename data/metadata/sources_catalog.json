@@ -1,0 +1,133 @@
+{
+  "total_sources": 11,
+  "last_updated": "2026-09-18",
+  "organizations": [
+    "Food and Agriculture Organization of the United Nations (FAO)",
+    "Intergovernmental Panel on Climate Change (IPCC)",
+    "United Nations Environment Programme (UNEP)",
+    "Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES)",
+    "Nature Communications",
+    "Science (AAAS)",
+    "Journal of Applied Ecology",
+    "Environmental Pollution"
+  ],
+  "sources": [
+    {
+      "id": "fao-soc-2017-01",
+      "title": "Soil Organic Carbon: the hidden potential",
+      "organization": "FAO",
+      "year": 2017,
+      "url": "https://www.fao.org/documents/card/en/c/bc55f9e4-539c-4573-8cb2-df38d21b7145/",
+      "topic": "Soil Organic Carbon & Microbial Diversity",
+      "metrics": ["SOC %", "Microbial Biomass", "Available Water Capacity"]
+    },
+    {
+      "id": "fao-soil-ph-2020-02",
+      "title": "Global Soil pH and Nutrient Availability Management",
+      "organization": "FAO & Global Soil Partnership",
+      "year": 2020,
+      "url": "https://www.fao.org/global-soil-partnership/resources/highlights/detail/en/c/1301053/",
+      "topic": "Soil pH Remediation and Macro/Micro Invertebrate Diversity",
+      "metrics": ["Soil pH", "Cation Exchange Capacity", "Earthworm Abundance"]
+    },
+    {
+      "id": "fao-water-soil-2021-03",
+      "title": "The State of the World's Land and Water Resources for Food and Agriculture (SOLAW 2021)",
+      "organization": "FAO",
+      "year": 2021,
+      "url": "https://doi.org/10.4060/cb7654en",
+      "topic": "Soil Moisture Retention & Infiltration under Conservation Tillage",
+      "metrics": ["Infiltration Rate", "Evaporation Reduction", "Water Retention"]
+    },
+    {
+      "id": "ipcc-srcl-ch04-2019",
+      "title": "IPCC Special Report on Climate Change and Land: Land Degradation (Chapter 4)",
+      "organization": "IPCC",
+      "year": 2019,
+      "url": "https://www.ipcc.ch/srccl/chapter/chapter-4/",
+      "topic": "Agroforestry, Land Degradation & Multi-Trophic Biodiversity",
+      "metrics": ["Canopy Temperature", "Species Richness", "Soil Erosion"]
+    },
+    {
+      "id": "ipcc-srcl-ch05-2019",
+      "title": "IPCC Special Report on Climate Change and Land: Food Security & Diversification (Chapter 5)",
+      "organization": "IPCC",
+      "year": 2019,
+      "url": "https://www.ipcc.ch/srccl/chapter/chapter-5/",
+      "topic": "Crop Diversification, Intercropping & Soil Resilience",
+      "metrics": ["Biological Nitrogen Fixation", "Pollinator Visitation", "Yield Variance"]
+    },
+    {
+      "id": "unep-pollinator-2020-01",
+      "title": "Pollinators and Pollination: Status and Trends",
+      "organization": "UNEP & UNEP-WCMC",
+      "year": 2020,
+      "url": "https://www.unep.org/resources/report/pollinators-and-pollination",
+      "topic": "Pollinator Decline, Agro-Chemical Pollution & Floral Strips",
+      "metrics": ["Pollinator Abundance", "Parasitoid Wasp Density", "Pest Suppression"]
+    },
+    {
+      "id": "unep-water-pollution-2021-02",
+      "title": "A Snapshot of the World's Water Quality: Towards a global assessment",
+      "organization": "UNEP",
+      "year": 2021,
+      "url": "https://www.unep.org/resources/publication/snapshot-worlds-water-quality",
+      "topic": "Agricultural Nutrient Pollution, Eutrophication & Riparian Buffers",
+      "metrics": ["Nitrate Interception", "Dissolved Oxygen", "Riparian Biodiversity"]
+    },
+    {
+      "id": "ipbes-global-assessment-2019",
+      "title": "Global Assessment Report on Biodiversity and Ecosystem Services",
+      "organization": "IPBES",
+      "year": 2019,
+      "url": "https://doi.org/10.5281/zenodo.3831735",
+      "topic": "Habitat Fragmentation, Ecological Corridors & Metapopulation Dynamics",
+      "metrics": ["Functional Connectivity", "Core Habitat Area", "Species Richness"]
+    },
+    {
+      "id": "ipbes-land-degradation-2018",
+      "title": "The Assessment Report on Land Degradation and Restoration",
+      "organization": "IPBES",
+      "year": 2018,
+      "url": "https://doi.org/10.5281/zenodo.3237392",
+      "topic": "Ecosystem Restoration, Soil Rebuilding & Trophic Cascades",
+      "metrics": ["Fungal:Bacterial Ratio", "Macro-invertebrate Density", "Trophic Cascade"]
+    },
+    {
+      "id": "peer-nature-agro-2021",
+      "title": "Global biodiversity and ecological benefits of cover crops in agroecosystems",
+      "organization": "Nature Communications",
+      "year": 2021,
+      "url": "https://doi.org/10.1038/s41467-020-19238-x",
+      "topic": "Legume Cover Crops, Soil Organic Carbon, and Microbial Networks",
+      "metrics": ["SOC Stock %", "AMF Hyphal Density", "Macro-aggregate Stability"]
+    },
+    {
+      "id": "peer-soil-biology-2022",
+      "title": "Remediating agricultural waterlogging through bioswales and riparian vegetation",
+      "organization": "Journal of Applied Ecology",
+      "year": 2022,
+      "url": "https://doi.org/10.1111/1365-2664.14112",
+      "topic": "High Soil Moisture, Waterlogging Remediation & Wetland Biodiversity",
+      "metrics": ["Water Table Depth", "Redox Potential Eh", "Aquatic Insect Richness"]
+    },
+    {
+      "id": "peer-science-poll-2020",
+      "title": "Ecological corridors mitigate habitat fragmentation across heterogeneous farming landscapes",
+      "organization": "Science",
+      "year": 2020,
+      "url": "https://doi.org/10.1126/science.aax8953",
+      "topic": "Habitat Corridors, Seed Dispersal & Plant Species Persistence",
+      "metrics": ["Patches Richness Advantage", "Extinction Rate Reduction", "Corridor Width"]
+    },
+    {
+      "id": "peer-environ-pollution-2023",
+      "title": "Phytoremediation and vegetative filter strips for pesticide and heavy metal mitigation",
+      "organization": "Environmental Pollution",
+      "year": 2023,
+      "url": "https://doi.org/10.1016/j.envpol.2023.121845",
+      "topic": "Pollution Remediation, Pesticide Degradation & Vegetative Buffers",
+      "metrics": ["Rhizodegradation Rate", "Bioaccumulation Reduction", "Faunal Recolonization"]
+    }
+  ]
+}

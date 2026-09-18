@@ -1,0 +1,37 @@
+[
+  {
+    "id": "ipbes-global-assessment-2019",
+    "title": "Global Assessment Report on Biodiversity and Ecosystem Services",
+    "organization": "Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES)",
+    "authors": "Díaz, S., J. Settele, E. S. Brondízio, H. T. Ngo, et al.",
+    "year": 2019,
+    "doi_or_url": "https://doi.org/10.5281/zenodo.3831735",
+    "topic": "Habitat Fragmentation, Ecological Corridors & Metapopulation Dynamics",
+    "ecosystem_types": ["Fragmented agricultural landscapes", "Forest fragments", "Grassland mosaics"],
+    "variables": ["habitat_diversity", "land_use", "species_richness", "deforestation"],
+    "content": "Land conversion and habitat fragmentation are the single largest direct driver of terrestrial biodiversity loss worldwide. When contiguous habitat is dissected into isolated patches under 10 hectares, edge effects (desiccation, invasive plant encroachment, elevated predation) penetrate up to 100 meters inward, reducing core functional habitat by 60-90%. Establishing continuous biological corridors and living hedgerows (minimum width 5-15 meters) connecting isolated woodland fragments restores gene flow, increases functional connectivity by 300%, and increases local bird, bat, and small mammal species richness by 30-55% over a 3 to 6 year timeframe.",
+    "quantitative_ranges": {
+      "functional_connectivity_increase_pct": [200, 350],
+      "species_richness_increase_pct": [30, 55],
+      "edge_effect_penetration_meters": [50, 100],
+      "time_horizon_years": [3, 6]
+    }
+  },
+  {
+    "id": "ipbes-land-degradation-2018",
+    "title": "The Assessment Report on Land Degradation and Restoration",
+    "organization": "Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES)",
+    "authors": "Montanarella, L., R. Scholes, A. Brainich, et al.",
+    "year": 2018,
+    "doi_or_url": "https://doi.org/10.5281/zenodo.3237392",
+    "topic": "Ecosystem Restoration, Soil Rebuilding & Trophic Cascades",
+    "ecosystem_types": ["Degraded rangelands", "Intensive monoculture farms", "Post-industrial soils"],
+    "variables": ["soil_organic_carbon", "habitat_diversity", "species_richness", "human_impact"],
+    "content": "Ecological restoration of degraded agricultural land requires simultaneous below-ground soil microbial rehabilitation and above-ground structural diversification. Re-establishing native perennial polycultures and multi-species vegetative covers elevates fungal-to-bacterial biomass ratios from 0.1 (degraded agricultural soil) toward 0.8-1.2 (healthy regenerative ecosystem). This creates micro-habitats for ground-nesting solitary bees, predatory carabid beetles, and mycorrhizal fungi networks, triggering trophic cascades that support insectivorous birds and small reptiles within 3 to 5 years.",
+    "quantitative_ranges": {
+      "fungal_to_bacterial_ratio_target": [0.8, 1.2],
+      "trophic_cascade_response_time_years": [3, 5],
+      "predatory_beetle_density_increase_pct": [40, 75]
+    }
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "id": "fao-soc-2017-01",
+    "title": "Soil Organic Carbon: the hidden potential",
+    "organization": "Food and Agriculture Organization of the United Nations (FAO)",
+    "authors": "FAO Intergovernmental Technical Panel on Soils (ITPS)",
+    "year": 2017,
+    "doi_or_url": "https://www.fao.org/documents/card/en/c/bc55f9e4-539c-4573-8cb2-df38d21b7145/",
+    "topic": "Soil Organic Carbon & Microbial Diversity",
+    "ecosystem_types": ["Semi-arid", "Arable cropland", "Temperate drylands"],
+    "variables": ["soil_organic_carbon", "microbial_biomass", "soil_moisture", "biodiversity"],
+    "content": "Soil organic carbon (SOC) is critical for biological activity and terrestrial ecosystem functioning. An increase of 1% absolute soil organic matter or 0.5% SOC in the topsoil (0-30 cm) enhances available water capacity (AWC) by an estimated 1.5% to 3.7% volumetric moisture depending on soil texture. In semi-arid regions with baseline SOC < 0.5%, introducing legume-based cover crops (e.g., Vicia villosa, Medicago sativa) and residue retention increases SOC by 0.15% to 0.40% C/yr (~15-25% relative increase over 2-3 years). This stimulates heterotrophic microbial biomass carbon by 20-45%, accelerating nutrient cycling, glomalin production, and aggregate stability.",
+    "quantitative_ranges": {
+      "soc_increase_relative_pct": [15, 25],
+      "time_horizon_years": [2, 3],
+      "available_water_capacity_increase_pct": [1.5, 3.7],
+      "microbial_biomass_increase_pct": [20, 45]
+    }
+  },
+  {
+    "id": "fao-soil-ph-2020-02",
+    "title": "Global Soil pH and Nutrient Availability Management",
+    "organization": "Food and Agriculture Organization (FAO) & Global Soil Partnership",
+    "authors": "FAO Global Soil Doctors Programme",
+    "year": 2020,
+    "doi_or_url": "https://www.fao.org/global-soil-partnership/resources/highlights/detail/en/c/1301053/",
+    "topic": "Soil pH Remediation and Macro/Micro Invertebrate Diversity",
+    "ecosystem_types": ["Acidic croplands", "Degraded agricultural soils", "Intensive monoculture"],
+    "variables": ["soil_ph", "nutrient_availability", "earthworm_density", "species_richness"],
+    "content": "Soil pH strongly modulates nutrient availability and below-ground biodiversity. In soils with pH < 5.5, aluminum and manganese toxicity inhibit root elongation and drastically suppress beneficial nitrifying bacteria and earthworm populations (Lumbricidae). Applying calcitic or dolomitic agricultural limestone combined with biochar neutralizes exchangeable acidity (raising pH toward optimal 6.2-6.8), which elevates cation exchange capacity (CEC) and increases earthworm abundance by 35-60% within 12-24 months. In alkaline soils (pH > 8.0), elemental sulfur and organic mulching release sulfate and organic acids, lowering rhizosphere pH and unlocking immobilized phosphorus and micronutrients (Fe, Zn, Mn).",
+    "quantitative_ranges": {
+      "optimal_ph_range": [6.2, 6.8],
+      "earthworm_abundance_increase_pct": [35, 60],
+      "remediation_time_horizon_months": [12, 24]
+    }
+  },
+  {
+    "id": "fao-water-soil-2021-03",
+    "title": "The State of the World's Land and Water Resources for Food and Agriculture (SOLAW 2021)",
+    "organization": "Food and Agriculture Organization (FAO)",
+    "authors": "FAO Land and Water Division",
+    "year": 2021,
+    "doi_or_url": "https://doi.org/10.4060/cb7654en",
+    "topic": "Soil Moisture Retention & Infiltration under Conservation Tillage",
+    "ecosystem_types": ["Semi-arid croplands", "Rainfed agricultural systems", "Drylands"],
+    "variables": ["soil_moisture", "rainfall", "tillage", "soil_organic_carbon"],
+    "content": "Conventional continuous tillage in drylands and semi-arid zones accelerates organic matter oxidation and creates subsoil hardpans, reducing rainfall infiltration by up to 50% and causing catastrophic runoff. Transitioning to zero-tillage or minimum-tillage with permanent organic soil cover increases water infiltration rates by 40-70% and reduces soil surface evaporation. Under low rainfall (<400 mm/year), mulched soil retains 10-25 mm more plant-available water throughout the reproductive phase, buffering native soil microbial communities and ephemeral wildflower biodiversity against thermal and moisture stress.",
+    "quantitative_ranges": {
+      "infiltration_rate_increase_pct": [40, 70],
+      "evaporation_reduction_pct": [25, 45],
+      "plant_available_water_buffer_mm": [10, 25]
+    }
+  }
+]

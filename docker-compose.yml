@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  darukaa-ai:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: darukaa_biodiversity_platform
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - HOST=0.0.0.0
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - LLM_PROVIDER=${LLM_PROVIDER:-auto}
+    volumes:
+      - ./data/chroma_db:/app/data/chroma_db
+    restart: unless-stopped
