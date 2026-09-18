@@ -275,6 +275,42 @@ async def analyze_structured(env_input: EnvironmentalInput):
     )
 
 
+@router.post("/recommend")
+async def generate_recommendations(env_input: EnvironmentalInput):
+    """Direct recommendations endpoint returning actionable multi-variable ecological interventions."""
+    query_parts = [
+        env_input.region or "",
+        env_input.land_use or "",
+        env_input.rainfall or "",
+        "soil organic carbon" if env_input.soil and env_input.soil.organic_carbon_percent is not None else "",
+        "waterlogging drainage bioswales" if env_input.soil and env_input.soil.moisture_percent and env_input.soil.moisture_percent > 30 else "",
+        "pesticide pollution chemical runoff wildflower margins" if env_input.human_impact and env_input.human_impact.pollution else ""
+    ]
+    query_str = " ".join([p for p in query_parts if p]).strip() or "soil carbon biodiversity restoration"
+    retrieved_chunks = vector_store.retrieve(query=query_str, top_k=5)
+    reasoning_data = reasoning_engine.synthesize_assessment(env_input, retrieved_chunks)
+    
+    return {
+        "status": "success",
+        "recommendations": reasoning_data["recommendations"],
+        "key_interactions": reasoning_data["key_interactions"],
+        "evidence": reasoning_data["evidence"]
+    }
+
+
+@router.post("/ingest")
+async def trigger_ingestion():
+    """Triggers knowledge ingestion pipeline and refreshes vector index."""
+    from scripts.ingest import run_ingestion
+    chunks = run_ingestion()
+    vector_store._initialize()
+    return {
+        "status": "success",
+        "message": "Knowledge base ingested and vector index refreshed.",
+        "total_chunks": len(chunks)
+    }
+
+
 @router.get("/conversations/{session_id}")
 async def get_conversation(session_id: str):
     """Retrieves full conversation history and accumulated environmental state."""

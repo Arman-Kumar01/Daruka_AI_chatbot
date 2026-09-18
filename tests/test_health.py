@@ -33,3 +33,26 @@ def test_demo_scenarios_endpoint():
     data = response.json()
     assert "scenarios" in data
     assert len(data["scenarios"]) >= 3
+
+
+def test_recommend_endpoint():
+    payload = {
+        "region": "semi-arid",
+        "soil": {"organic_carbon_percent": 0.3},
+        "rainfall": "low",
+        "land_use": "monoculture wheat"
+    }
+    response = client.post("/api/recommend", json=payload)
+    assert response.status_code == 200
+    data = response.json()
+    assert data["status"] == "success"
+    assert len(data["recommendations"]) >= 1
+    assert len(data["key_interactions"]) >= 1
+
+
+def test_ingest_endpoint():
+    response = client.post("/api/ingest")
+    assert response.status_code == 200
+    data = response.json()
+    assert data["status"] == "success"
+    assert data["total_chunks"] >= 26
