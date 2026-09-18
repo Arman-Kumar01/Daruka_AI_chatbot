@@ -13,7 +13,8 @@ from docx.oxml import OxmlElement, parse_xml
 from docx.oxml.ns import nsdecls, qn
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-DOCX_PATH = BASE_DIR / "docs" / "Darukaa_Earth_Biodiversity_AI_Submission.docx"
+DOCX_PATH = BASE_DIR / "docs" / "Darukaa_Biodiversity_Submission_Final.docx"
+DOCX_PATH_ORIG = BASE_DIR / "docs" / "Darukaa_Earth_Biodiversity_AI_Submission.docx"
 
 
 def set_cell_background(cell, fill_hex):
@@ -93,8 +94,8 @@ def create_submission_docx():
     p_repo = doc.add_paragraph()
     r1 = p_repo.add_run("GitHub Repository Link:\n")
     r1.font.bold = True
-    p_repo.add_run("https://github.com/your-username/darukaa-biodiversity-ai\n").font.color.rgb = RGBColor(2, 132, 199)
-    p_repo.add_run("(Please replace 'your-username' with the exact repository destination upon upload.)\n\n")
+    p_repo.add_run("https://github.com/Arman-Kumar01/Daruka_AI_chatbot\n").font.color.rgb = RGBColor(2, 132, 199)
+    p_repo.add_run("(Repository initialized with complete source code, tests, RAG pipeline, and CI/CD)\n\n")
 
     r2 = p_repo.add_run("Live Application Demo / Local Endpoints:\n")
     r2.font.bold = True

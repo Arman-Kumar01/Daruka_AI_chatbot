@@ -5,7 +5,7 @@
 ---
 
 ### 1. GitHub Repository Link
-- **Repository URL**: `https://github.com/your-username/darukaa-biodiversity-ai` *(Replace with your repository link upon upload)*
+- **Repository URL**: `https://github.com/Arman-Kumar01/Daruka_AI_chatbot`
 - **Private Repository Collaborators**:
   - `ankita.dasgupta@darukaa.com`
   - `harsh.kumar@darukaa.com`
