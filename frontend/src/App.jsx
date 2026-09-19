@@ -1,4 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+import remarkBreaks from 'remark-breaks'
+import rehypeSanitize from 'rehype-sanitize'
 
 // Production API base URL — set VITE_API_BASE_URL in Vercel environment variables
 // to your Render backend URL, e.g. https://darukaa-ai.onrender.com
@@ -466,7 +470,68 @@ export default function App() {
                           <div className="font-semibold text-[11px] mb-1 opacity-70">
                             {msg.role === 'user' ? 'User' : 'AI Environmental Scientist'}
                           </div>
-                          <div className="whitespace-pre-wrap">{msg.content}</div>
+                          {msg.role === 'user' ? (
+                            <div className="whitespace-pre-wrap">{msg.content}</div>
+                          ) : (
+                            <div className="text-xs leading-relaxed text-slate-200">
+                              <ReactMarkdown
+                                remarkPlugins={[remarkGfm, remarkBreaks]}
+                                rehypePlugins={[rehypeSanitize]}
+                                components={{
+                                  p: ({ node, ...props }) => <p {...props} className="mb-2 last:mb-0" />,
+                                  strong: ({ node, ...props }) => <strong {...props} className="font-semibold text-white" />,
+                                  em: ({ node, ...props }) => <em {...props} className="italic text-slate-300" />,
+                                  h1: ({ node, ...props }) => <h1 {...props} className="text-sm font-bold text-white mb-2 mt-3 font-display first:mt-0" />,
+                                  h2: ({ node, ...props }) => <h2 {...props} className="text-xs font-bold text-emerald-300 mb-1.5 mt-2.5 font-display first:mt-0" />,
+                                  h3: ({ node, ...props }) => <h3 {...props} className="text-xs font-semibold text-cyan-300 mb-1 mt-2 first:mt-0" />,
+                                  h4: ({ node, ...props }) => <h4 {...props} className="text-xs font-semibold text-slate-200 mb-1 mt-1.5 first:mt-0" />,
+                                  ul: ({ node, ...props }) => <ul {...props} className="list-disc list-outside ml-4 mb-2 space-y-1" />,
+                                  ol: ({ node, ...props }) => <ol {...props} className="list-decimal list-outside ml-4 mb-2 space-y-1" />,
+                                  li: ({ node, ...props }) => <li {...props} className="text-slate-200 leading-normal" />,
+                                  a: ({ node, ...props }) => (
+                                    <a
+                                      {...props}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="text-emerald-400 hover:text-emerald-300 underline underline-offset-2 font-medium break-all transition-colors"
+                                    />
+                                  ),
+                                  code: ({ node, inline, ...props }) => (
+                                    <code
+                                      {...props}
+                                      className="bg-slate-900/90 text-emerald-300 px-1.5 py-0.5 rounded text-[11px] font-mono border border-white/5 break-all"
+                                    />
+                                  ),
+                                  pre: ({ node, ...props }) => (
+                                    <pre
+                                      {...props}
+                                      className="bg-slate-900/90 p-3 rounded-xl overflow-x-auto text-[11px] font-mono text-emerald-300 border border-white/10 my-2"
+                                    />
+                                  ),
+                                  blockquote: ({ node, ...props }) => (
+                                    <blockquote
+                                      {...props}
+                                      className="border-l-2 border-emerald-500/50 pl-3 my-2 text-slate-300 italic bg-emerald-500/5 py-1 rounded-r"
+                                    />
+                                  ),
+                                  table: ({ node, ...props }) => (
+                                    <div className="overflow-x-auto my-2">
+                                      <table {...props} className="min-w-full text-[11px] border border-white/10 rounded-lg overflow-hidden" />
+                                    </div>
+                                  ),
+                                  th: ({ node, ...props }) => (
+                                    <th {...props} className="bg-slate-900/90 px-2.5 py-1.5 text-left font-semibold text-white border-b border-white/10" />
+                                  ),
+                                  td: ({ node, ...props }) => (
+                                    <td {...props} className="px-2.5 py-1.5 border-b border-white/5 text-slate-300" />
+                                  ),
+                                  hr: ({ node, ...props }) => <hr {...props} className="border-white/10 my-3" />
+                                }}
+                              >
+                                {msg.content}
+                              </ReactMarkdown>
+                            </div>
+                          )}
 
                           {/* Missing Info Prompt within Chat */}
                           {msg.clarifyingQuestions && msg.clarifyingQuestions.length > 0 && (
