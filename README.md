@@ -155,8 +155,7 @@ Daruka_AI_chatbot/
 │   └── generate_docx.py           # Generates the official Word submission document
 ├── docs/
 │   ├── ARCHITECTURE.md            # Deep mathematical and ecological architecture
-│   ├── SUBMISSION.md              # Hackathon submission summary
-│   └── Darukaa_Earth_Biodiversity_AI_Submission.docx # Official submission document (.docx)
+│   └── SUBMISSION.md              # Hackathon submission summary
 ├── .github/workflows/
 │   └── ci.yml                     # GitHub Actions CI workflow
 ├── Dockerfile                     # Multi-stage container build
@@ -178,8 +177,8 @@ Daruka_AI_chatbot/
 ### Method 1: Local Full-Stack (Recommended)
 ```bash
 # 1. Clone repository
-git clone https://github.com/your-username/darukaa-biodiversity-ai.git
-cd darukaa-biodiversity-ai
+git clone https://github.com/Arman-Kumar01/Daruka_AI_chatbot.git
+cd Daruka_AI_chatbot
 
 # 2. Install Python dependencies
 python -m pip install -r requirements.txt
