@@ -67,7 +67,10 @@ export default function App() {
   // Raw JSON input
   const [jsonText, setJsonText] = useState('')
 
+  const chatContainerRef = useRef(null)
   const chatEndRef = useRef(null)
+  const isNearBottomRef = useRef(true)
+  const userJustSentRef = useRef(false)
 
   // Initial Load: Check health, load sources and scenarios
   useEffect(() => {
@@ -78,9 +81,41 @@ export default function App() {
     syncFormToJson(formState)
   }, [])
 
+  const handleChatScroll = () => {
+    const container = chatContainerRef.current
+    if (!container) return
+    const distanceFromBottom = container.scrollHeight - container.scrollTop - container.clientHeight
+    // If within 80px of bottom, consider user is at bottom
+    isNearBottomRef.current = distanceFromBottom <= 80
+  }
+
+  const scrollToBottom = (behavior = 'smooth') => {
+    requestAnimationFrame(() => {
+      const container = chatContainerRef.current
+      if (container) {
+        container.scrollTo({
+          top: container.scrollHeight,
+          behavior
+        })
+      }
+    })
+  }
+
+  // Smoothly auto-scroll when new message arrives or loading changes,
+  // without fighting the user if they manually scrolled up to read older messages
   useEffect(() => {
-    chatEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+    if (userJustSentRef.current || isNearBottomRef.current) {
+      scrollToBottom('smooth')
+      userJustSentRef.current = false
+    }
   }, [chatMessages, loading])
+
+  // When switching to conversational chat tab, scroll to bottom if at bottom
+  useEffect(() => {
+    if (activeInputTab === 'chat' && isNearBottomRef.current) {
+      scrollToBottom('auto')
+    }
+  }, [activeInputTab])
 
   const fetchHealth = async () => {
     try {
@@ -203,7 +238,10 @@ export default function App() {
 
     const userQuery = chatInput.trim()
     setChatInput('')
+    userJustSentRef.current = true
+    isNearBottomRef.current = true
     setChatMessages((prev) => [...prev, { role: 'user', content: userQuery }])
+    scrollToBottom('smooth')
     setLoading(true)
     setError(null)
 
@@ -255,12 +293,14 @@ export default function App() {
     setChatMessages([])
     setAssessmentData(null)
     setError(null)
+    isNearBottomRef.current = true
+    userJustSentRef.current = false
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#090d16] text-slate-100">
+    <div className="min-h-screen lg:h-screen lg:overflow-hidden flex flex-col bg-[#090d16] text-slate-100">
       {/* Top Navbar */}
-      <header className="border-b border-white/10 bg-slate-900/60 backdrop-blur-md sticky top-0 z-40 px-6 py-3.5 flex items-center justify-between">
+      <header className="shrink-0 border-b border-white/10 bg-slate-900/60 backdrop-blur-md sticky top-0 z-40 px-6 py-3.5 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shadow-lg shadow-emerald-500/10">
             <Sprout className="w-6 h-6" />
@@ -307,7 +347,7 @@ export default function App() {
       </header>
 
       {/* Demo Scenario Quick-Launcher Bar */}
-      <div className="bg-slate-900/40 border-b border-white/5 px-6 py-2.5 flex items-center gap-2 overflow-x-auto text-xs">
+      <div className="shrink-0 bg-slate-900/40 border-b border-white/5 px-6 py-2.5 flex items-center gap-2 overflow-x-auto text-xs">
         <span className="text-slate-400 font-medium flex items-center gap-1 shrink-0">
           <Sparkles className="w-3.5 h-3.5 text-amber-400" /> Challenge Scenarios:
         </span>
@@ -325,12 +365,12 @@ export default function App() {
       </div>
 
       {/* Main Split Layout */}
-      <main className="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-6 p-6 max-w-[1700px] w-full mx-auto">
+      <main className="flex-1 min-h-0 grid grid-cols-1 lg:grid-cols-12 gap-6 p-4 lg:p-6 max-w-[1700px] w-full mx-auto">
         {/* Left Column: Input Modes (Chat / Structured Form / JSON) */}
-        <section className="lg:col-span-5 flex flex-col gap-4">
-          <div className="glass-panel p-4 flex flex-col h-full min-h-[600px]">
+        <section className="lg:col-span-5 flex flex-col min-h-0 h-[620px] lg:h-full">
+          <div className="glass-panel p-4 flex flex-col flex-1 min-h-0 h-full">
             {/* Input Mode Navigation Tabs */}
-            <div className="flex items-center justify-between border-b border-white/10 pb-3 mb-4">
+            <div className="shrink-0 flex items-center justify-between border-b border-white/10 pb-3 mb-4">
               <div className="flex items-center gap-1 p-1 bg-slate-950/60 rounded-xl border border-white/5">
                 <button
                   onClick={() => setActiveInputTab('chat')}
@@ -375,9 +415,13 @@ export default function App() {
 
             {/* TAB 1: Conversational Chat */}
             {activeInputTab === 'chat' && (
-              <div className="flex-1 flex flex-col justify-between">
+              <div className="flex-1 flex flex-col min-h-0">
                 {/* Chat Message Stream */}
-                <div className="flex-1 overflow-y-auto pr-1 space-y-4 max-h-[560px]">
+                <div
+                  ref={chatContainerRef}
+                  onScroll={handleChatScroll}
+                  className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden pr-1 space-y-4"
+                >
                   {chatMessages.length === 0 ? (
                     <div className="h-full flex flex-col items-center justify-center text-center p-6 text-slate-400">
                       <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-3">
@@ -413,7 +457,7 @@ export default function App() {
                         className={`flex flex-col ${msg.role === 'user' ? 'items-end' : 'items-start'}`}
                       >
                         <div
-                          className={`max-w-[90%] rounded-2xl p-4 text-xs leading-relaxed ${
+                          className={`max-w-[90%] rounded-2xl p-4 text-xs leading-relaxed break-words ${
                             msg.role === 'user'
                               ? 'bg-emerald-600/30 border border-emerald-500/40 text-emerald-100'
                               : 'bg-slate-800/80 border border-white/10 text-slate-200'
@@ -455,7 +499,7 @@ export default function App() {
                 </div>
 
                 {/* Input Bar */}
-                <form onSubmit={handleChatSubmit} className="mt-4 pt-3 border-t border-white/10 flex gap-2">
+                <form onSubmit={handleChatSubmit} className="shrink-0 mt-3 pt-3 border-t border-white/10 flex gap-2">
                   <input
                     type="text"
                     value={chatInput}
@@ -466,7 +510,7 @@ export default function App() {
                   <button
                     type="submit"
                     disabled={loading || !chatInput.trim()}
-                    className="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-white text-xs font-medium flex items-center gap-1.5 transition-colors shadow-lg shadow-emerald-500/20"
+                    className="shrink-0 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-white text-xs font-medium flex items-center gap-1.5 transition-colors shadow-lg shadow-emerald-500/20"
                   >
                     <span>Send</span>
                     <Send className="w-3.5 h-3.5" />
@@ -477,7 +521,7 @@ export default function App() {
 
             {/* TAB 2: Structured Form Input */}
             {activeInputTab === 'form' && (
-              <div className="flex-1 overflow-y-auto pr-1 space-y-4 text-xs">
+              <div className="flex-1 min-h-0 overflow-y-auto pr-1 space-y-4 text-xs">
                 {/* Soil Health Section */}
                 <div className="p-3.5 rounded-xl bg-slate-950/50 border border-white/5 space-y-3">
                   <div className="font-semibold text-emerald-400 flex items-center gap-1.5">
@@ -655,7 +699,7 @@ export default function App() {
 
             {/* TAB 3: JSON Mode */}
             {activeInputTab === 'json' && (
-              <div className="flex-1 flex flex-col justify-between">
+              <div className="flex-1 min-h-0 flex flex-col justify-between">
                 <div className="text-[11px] text-slate-400 mb-2 flex items-center justify-between">
                   <span>Structured JSON Input Payload:</span>
                   <button
@@ -684,10 +728,10 @@ export default function App() {
         </section>
 
         {/* Right Column: Scientific Diagnostics & Evidence Grounding Engine */}
-        <section className="lg:col-span-7 flex flex-col gap-4">
-          <div className="glass-panel p-5 flex flex-col h-full min-h-[600px]">
+        <section className="lg:col-span-7 flex flex-col min-h-0 h-[620px] lg:h-full">
+          <div className="glass-panel p-5 flex flex-col flex-1 min-h-0 h-full">
             {/* View switcher on the right side */}
-            <div className="flex items-center justify-between border-b border-white/10 pb-3 mb-4">
+            <div className="shrink-0 flex items-center justify-between border-b border-white/10 pb-3 mb-4">
               <div className="flex items-center gap-2">
                 <div className="w-2.5 h-2.5 rounded-full bg-cyan-400"></div>
                 <h2 className="text-sm font-bold tracking-tight text-white font-display">
@@ -738,7 +782,7 @@ export default function App() {
 
             {/* TAB: DIAGNOSTICS & RECOMMENDATIONS */}
             {activeRightTab === 'diagnostics' && (
-              <div className="flex-1 overflow-y-auto pr-1 space-y-6">
+              <div className="flex-1 min-h-0 overflow-y-auto pr-1 space-y-6">
                 {!assessmentData ? (
                   <div className="h-full flex flex-col items-center justify-center text-center p-8 text-slate-400">
                     <Database className="w-10 h-10 text-slate-600 mb-3" />
@@ -935,7 +979,7 @@ export default function App() {
 
             {/* TAB: INSPECT RAG EVIDENCE */}
             {activeRightTab === 'rag_explorer' && (
-              <div className="flex-1 overflow-y-auto pr-1 space-y-3 text-xs">
+              <div className="flex-1 min-h-0 overflow-y-auto pr-1 space-y-3 text-xs">
                 <div className="p-3 rounded-xl bg-slate-950 border border-white/10 text-slate-400 text-xs mb-3 flex items-center justify-between">
                   <div>
                     <span className="font-semibold text-white">RAG Evidence Grounding Layer</span>
@@ -981,7 +1025,7 @@ export default function App() {
 
             {/* TAB: FULL BIBLIOGRAPHIC SOURCES CATALOG */}
             {activeRightTab === 'sources' && (
-              <div className="flex-1 overflow-y-auto pr-1 space-y-3 text-xs">
+              <div className="flex-1 min-h-0 overflow-y-auto pr-1 space-y-3 text-xs">
                 <div className="p-3 rounded-xl bg-slate-950 border border-white/10 text-slate-400 mb-3">
                   <span className="font-semibold text-white">Authoritative Knowledge Base Index</span>
                   <p className="text-[11px]">
@@ -1022,7 +1066,7 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-white/5 bg-slate-950/80 px-6 py-3 text-center text-xs text-slate-500">
+      <footer className="shrink-0 border-t border-white/5 bg-slate-950/80 px-6 py-3 text-center text-xs text-slate-500">
         Darukaa.Earth AI Biodiversity Intelligence System — Built for Darukaa Hackathon. Grounded in FAO, IPCC, UNEP, IPBES & Peer-Reviewed Ecology.
       </footer>
     </div>
