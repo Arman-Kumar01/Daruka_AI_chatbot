@@ -42,9 +42,11 @@ yarn-error.log*
 .env.local
 frontend/.env.local
 
-# Office temporary lock files
+# Office temporary lock files & documents
 ~$*
 *.tmp
+*.docx
+docs/*.docx
 
 # IDE & OS
 .vscode/
